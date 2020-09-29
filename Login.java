@@ -8,7 +8,7 @@ public class Login{
 	Scanner sc=new Scanner(System.in);
 	String password=sc.nextLine();
 	
-	Pattern pattern = Pattern.compile("^[a-zA-z0-9]{8,}$"); 
+	Pattern pattern = Pattern.compile("^(?=.*?[A-Z])[a-zA-z0-9].{8,}$"); 
 	Matcher m=pattern.matcher(password);                                       
 	int i=0;
 
