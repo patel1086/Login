@@ -4,20 +4,20 @@ import java.util.regex.Matcher;
 
 public class Login{
 	public static void main(String[] args){
-	System.out.println("Enter your Email");
+	System.out.println("Enter your Mobile Number");
 	Scanner sc=new Scanner(System.in);
-	String email=sc.nextLine();
+	String mobile=sc.nextLine();
 	
-	Pattern pattern = Pattern.compile("^[_A-Za-z0-9+-]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"); 
-	Matcher m=pattern.matcher(email);                                       
+	Pattern pattern = Pattern.compile("^[0-9]{2}(\s{1}[0-9]{10})$"); 
+	Matcher m=pattern.matcher(mobile);                                       
 	int i=0;
 
 	while(m.find()){
-		System.out.println("Valid Email");
+		System.out.println("Valid Mobile Number");
 		i=1;
 	}
 	 if(i==0){
-		System.out.println("Invalid Email");	
+		System.out.println("Invalid Mobile Number");	
 	}
 
 	
